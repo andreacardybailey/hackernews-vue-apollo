@@ -1,25 +1,27 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+
+// Import the CreateLink and LinkList components 
+// which will be rendered for different routes
+import CreateLink from './components/CreateLink';
+import LinkList from './components/LinkList';
 
 Vue.use(Router);
 
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
+  // Map each route to the component that should be rendered
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home,
+      component: LinkList
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
-    },
+      path: '/create',
+      component: CreateLink
+    }
   ],
+  // Set mode to ‘history’ to remove the hash from the URLs
+  mode: 'history'
 });

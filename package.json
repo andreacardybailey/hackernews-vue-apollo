@@ -9,7 +9,15 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "apollo-cache-inmemory": "^1.4.3",
+    "apollo-client": "^2.4.13",
+    "apollo-link": "^1.2.8",
+    "apollo-link-http": "^1.5.11",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
+    "tachyons": "^4.11.1",
     "vue": "^2.5.22",
+    "vue-apollo": "^3.0.0-beta.28",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
